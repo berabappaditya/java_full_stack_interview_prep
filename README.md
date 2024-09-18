@@ -15,4 +15,4 @@
 
 ## Spring boot java
   - what is serialization
-  - 
+  - types of dependency injection in spring
