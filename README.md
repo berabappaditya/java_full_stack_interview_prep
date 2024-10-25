@@ -12,6 +12,7 @@
 ## java OOPs
   - Difference between absruct class and interface
   - why interface in needed when interface do the same
+  - what is dynamic binding
 
 ## Spring boot java
   - what is serialization
@@ -62,3 +63,37 @@
 
 17. 
     - How can you skip some fields while saving an entity in a databases
+
+
+/// Docker tutorial
+## Docker Basics
+docker --version: Check Docker version.
+docker info: Get detailed information about your Docker setup.
+2. Working with Docker Images
+docker images: List all images on your system.
+docker pull <image-name>: Download an image from Docker Hub (e.g., docker pull nginx).
+docker rmi <image-id>: Remove an image from your system.
+3. Managing Containers
+docker ps: List all running containers.
+docker ps -a: List all containers, including stopped ones.
+docker run <image-name>: Run a container from an image (e.g., docker run nginx).
+docker run -d <image-name>: Run a container in detached mode (background).
+docker run -it <image-name> /bin/bash: Run a container in interactive mode with a terminal.
+docker stop <container-id>: Stop a running container.
+docker start <container-id>: Start a stopped container.
+docker restart <container-id>: Restart a container.
+docker rm <container-id>: Remove a stopped container.
+4. Container and Image Management
+docker logs <container-id>: View the logs of a container.
+docker exec -it <container-id> /bin/bash: Access the shell of a running container.
+docker commit <container-id> <new-image-name>: Save changes to a new image.
+5. Network and Volumes
+docker network ls: List Docker networks.
+docker volume ls: List Docker volumes.
+docker network create <network-name>: Create a custom network.
+docker volume create <volume-name>: Create a custom volume.
+6. Docker Clean-up Commands
+docker system prune: Clean up unused containers, networks, images, and volumes.
+docker container prune: Remove all stopped containers.
+docker image prune: Remove unused images.
+docker volume prune: Remove unused volumes.
