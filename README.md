@@ -67,13 +67,15 @@
 
 /// Docker tutorial
 ## Docker Basics
-<code>
+
 - docker --version: Check Docker version.
 - docker info: Get detailed information about your Docker setup.
+  
 ### Working with Docker Images
 - docker images: List all images on your system.
 - docker pull <image-name>: Download an image from Docker Hub (e.g., docker pull nginx).
 - docker rmi <image-id>: Remove an image from your system.
+  
 ### Managing Containers
 - docker ps: List all running containers.
 - docker ps -a: List all containers, including stopped ones.
@@ -84,15 +86,18 @@
 - docker start <container-id>: Start a stopped container.
 - docker restart <container-id>: Restart a container.
 - docker rm <container-id>: Remove a stopped container.
+  
 ### Container and Image Management
 - docker logs <container-id>: View the logs of a container.
 - docker exec -it <container-id> /bin/bash: Access the shell of a running container.
 - docker commit <container-id> <new-image-name>: Save changes to a new image.
+  
 ### Network and Volumes
 - docker network ls: List Docker networks.
 - docker volume ls: List Docker volumes.
 - docker network create <network-name>: Create a custom network.
 - docker volume create <volume-name>: Create a custom volume.
+  
 ### Docker Clean-up Commands
 - docker system prune: Clean up unused containers, networks, images, and volumes.
 - docker container prune: Remove all stopped containers.
