@@ -104,8 +104,8 @@ Anonymous functions that enable functional programming
         Supplier<LocalDate> dateSupplier = LocalDate::now;
       ```
 ---
-  ## Method References
-      - Shorthand for lambda expressions
+## Method References
+- Shorthand for lambda expressions
       ```
         // Static method
         Function<String, Integer> parser = Integer::parseInt;
@@ -118,8 +118,8 @@ Anonymous functions that enable functional programming
         Supplier<List<String>> listSupplier = ArrayList::new;
       ```
 ---
-  ## Default Methods
-    - Interface evolution without breaking implementations
+ ## Default Methods
+ - Interface evolution without breaking implementations
         ```java
             interface Vehicle {
                 default void print() {
