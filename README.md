@@ -28,7 +28,7 @@ Anonymous functions that enable functional programming
 ```
 ---
 ## Functional interface
-###Exaplme
+### Exaplme
 ```java
 // Before Java 8
     new Thread(new Runnable() {
@@ -104,8 +104,8 @@ Anonymous functions that enable functional programming
         Supplier<LocalDate> dateSupplier = LocalDate::now;
       ```
 ---
-  ##Method References
-  ###Shorthand for lambda expressions
+  ## Method References
+      - Shorthand for lambda expressions
       ```
         // Static method
         Function<String, Integer> parser = Integer::parseInt;
@@ -118,7 +118,7 @@ Anonymous functions that enable functional programming
         Supplier<List<String>> listSupplier = ArrayList::new;
       ```
 ---
-  ##Default Methods
+  ## Default Methods
     - Interface evolution without breaking implementations
         ```java
             interface Vehicle {
@@ -132,8 +132,8 @@ Anonymous functions that enable functional programming
             }
         ```
 ---
-##Optional Class
-###Null-safe container object
+## Optional Class
+- Null-safe container object
 
 ```java
 
@@ -143,8 +143,8 @@ String result = optional
     .orElse("default");
 ```
 ---
-##Date/Time API
-###Joda-Time inspired date handling
+## Date/Time API
+- Joda-Time inspired date handling
 
 ```java
 LocalDate today = LocalDate.now();
