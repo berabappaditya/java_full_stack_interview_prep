@@ -26,6 +26,7 @@ Anonymous functions that enable functional programming
 (parameters) -> { statements; }
 
 ```
+---
 ## Functional interface
 ###Exaplme
 ```java
@@ -55,6 +56,7 @@ Anonymous functions that enable functional programming
     MathOperation add = (a, b) -> a + b;
     System.out.println(add.operate(5, 3)); // 8
 ```
+---
 # Stream API
   - Powerful pipeline processing for collections
 
@@ -84,6 +86,7 @@ Anonymous functions that enable functional programming
           .summaryStatistics();
       System.out.println("Average: " + stats.getAverage());
 ```
+---
 # Functional Interface
   - Single abstract method interfaces
     ### Common Interfaces
@@ -100,6 +103,7 @@ Anonymous functions that enable functional programming
         // Supplier: T get()
         Supplier<LocalDate> dateSupplier = LocalDate::now;
       ```
+---
   ##Method References
   ###Shorthand for lambda expressions
       ```
@@ -113,6 +117,7 @@ Anonymous functions that enable functional programming
         // Constructor reference
         Supplier<List<String>> listSupplier = ArrayList::new;
       ```
+---
   ##Default Methods
     - Interface evolution without breaking implementations
         ```java
@@ -126,7 +131,7 @@ Anonymous functions that enable functional programming
                 // Inherits default implementation
             }
         ```
-
+---
 ##Optional Class
 ###Null-safe container object
 
@@ -137,6 +142,7 @@ String result = optional
     .filter(s -> s.length() > 3)
     .orElse("default");
 ```
+---
 ##Date/Time API
 ###Joda-Time inspired date handling
 
@@ -149,6 +155,7 @@ Duration duration = Duration.between(
     LocalTime.now()
 );
 ```
+---
 ## Core Java 
   - java stream
   - java Synchronization
