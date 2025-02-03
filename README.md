@@ -1,6 +1,154 @@
 # java_full_stack_interview_prep
 
 
+
+# Java 8 Features Deep Dive
+
+A comprehensive guide to Java 8's revolutionary features with code examples.
+
+## Table of Contents
+1. [Lambda Expressions](#lambda-expressions)
+2. [Stream API](#stream-api)
+3. [Functional Interfaces](#functional-interfaces)
+4. [Method References](#method-references)
+5. [Default Methods in Interfaces](#default-methods)
+6. [Optional Class](#optional-class)
+7. [Date/Time API](#datetime-api)
+
+---
+
+## Lambda Expressions
+Anonymous functions that enable functional programming
+
+### Syntax
+```java
+(parameters) -> expression
+(parameters) -> { statements; }
+
+```
+## Functional interface
+###Exaplme
+```java
+// Before Java 8
+    new Thread(new Runnable() {
+        @Override
+        public void run() {
+            System.out.println("Old way");
+        }
+    }).start();
+    
+    // With Lambda
+    new Thread(() -> System.out.println("New way")).start();
+```
+### comparator example
+```java
+    List<String> names = Arrays.asList("John", "Alice", "Bob");
+    Collections.sort(names, (a, b) -> a.compareTo(b));
+```
+###Custom Functional Interface
+```java
+      @FunctionalInterface
+    interface MathOperation {
+        int operate(int a, int b);
+    }
+    
+    MathOperation add = (a, b) -> a + b;
+    System.out.println(add.operate(5, 3)); // 8
+```
+## Stream API
+  - Powerful pipeline processing for collections
+
+ ### Key Operations
+  - Operation Type	Methods
+  - Intermediate	filter(), map(), sorted(), distinct(), limit()
+  - Terminal	forEach(), collect(), reduce(), count(), anyMatch()
+### Basic Pipeline
+  ```java
+   List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+    
+    List<Integer> result = numbers.stream()
+        .filter(n -> n % 2 == 0)
+        .map(n -> n * 2)
+        .collect(Collectors.toList());
+    // [4, 8, 12]
+  ```
+ ### Advance Operations
+  ```java
+      // Grouping
+      Map<String, List<Employee>> byDept = employees.stream()
+          .collect(Collectors.groupingBy(Employee::getDepartment));
+      
+      // Statistics
+      IntSummaryStatistics stats = numbers.stream()
+          .mapToInt(Integer::intValue)
+          .summaryStatistics();
+      System.out.println("Average: " + stats.getAverage());
+```
+## Functional Interface
+  - Single abstract method interfaces
+    ### Common Interfaces
+      ```
+       // Predicate: boolean test(T t)
+        Predicate<String> isLong = s -> s.length() > 5;
+        
+        // Function: R apply(T t)
+        Function<Integer, String> intToString = Object::toString;
+        
+        // Consumer: void accept(T t)
+        Consumer<String> printer = System.out::println;
+        
+        // Supplier: T get()
+        Supplier<LocalDate> dateSupplier = LocalDate::now;
+      ```
+  ##Method References
+  ###Shorthand for lambda expressions
+      ```
+        // Static method
+        Function<String, Integer> parser = Integer::parseInt;
+        
+        // Instance method
+        List<String> names = Arrays.asList("Alice", "Bob");
+        names.forEach(System.out::println);
+        
+        // Constructor reference
+        Supplier<List<String>> listSupplier = ArrayList::new;
+      ```
+  ##Default Methods
+    - Interface evolution without breaking implementations
+        ```java
+            interface Vehicle {
+                default void print() {
+                    System.out.println("I'm a vehicle!");
+                }
+            }
+            
+            class Car implements Vehicle {
+                // Inherits default implementation
+            }
+        ```
+
+##Optional Class
+###Null-safe container object
+
+```java
+
+Optional<String> optional = Optional.ofNullable(getName());
+String result = optional
+    .filter(s -> s.length() > 3)
+    .orElse("default");
+```
+##Date/Time API
+###Joda-Time inspired date handling
+
+```java
+LocalDate today = LocalDate.now();
+LocalDate tomorrow = today.plusDays(1);
+
+Duration duration = Duration.between(
+    LocalTime.parse("09:00"),
+    LocalTime.now()
+);
+```
 ## Core Java 
   - java stream
   - java Synchronization
