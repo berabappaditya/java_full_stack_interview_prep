@@ -55,7 +55,7 @@ Anonymous functions that enable functional programming
     MathOperation add = (a, b) -> a + b;
     System.out.println(add.operate(5, 3)); // 8
 ```
-## Stream API
+# Stream API
   - Powerful pipeline processing for collections
 
  ### Key Operations
@@ -84,7 +84,7 @@ Anonymous functions that enable functional programming
           .summaryStatistics();
       System.out.println("Average: " + stats.getAverage());
 ```
-## Functional Interface
+# Functional Interface
   - Single abstract method interfaces
     ### Common Interfaces
       ```
