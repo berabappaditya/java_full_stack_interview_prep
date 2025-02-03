@@ -64,7 +64,7 @@ Anonymous functions that enable functional programming
   - Operation Type	Methods
   - Intermediate	filter(), map(), sorted(), distinct(), limit()
   - Terminal	forEach(), collect(), reduce(), count(), anyMatch()
-### Basic Pipeline
+ ### Basic Pipeline
   ```java
    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
     
@@ -85,12 +85,12 @@ Anonymous functions that enable functional programming
           .mapToInt(Integer::intValue)
           .summaryStatistics();
       System.out.println("Average: " + stats.getAverage());
-```
+ ```
 ---
 # Functional Interface
   - Single abstract method interfaces
     ### Common Interfaces
-      ```
+      ```java
        // Predicate: boolean test(T t)
         Predicate<String> isLong = s -> s.length() > 5;
         
@@ -104,9 +104,9 @@ Anonymous functions that enable functional programming
         Supplier<LocalDate> dateSupplier = LocalDate::now;
       ```
 ---
-## Method References
-- Shorthand for lambda expressions
-      ```
+# Method References
+  - Shorthand for lambda expressions
+      ```java
         // Static method
         Function<String, Integer> parser = Integer::parseInt;
         
@@ -118,9 +118,9 @@ Anonymous functions that enable functional programming
         Supplier<List<String>> listSupplier = ArrayList::new;
       ```
 ---
- ## Default Methods
- - Interface evolution without breaking implementations
-        ```java
+# Default Methods
+  - Interface evolution without breaking implementations
+    ```java
             interface Vehicle {
                 default void print() {
                     System.out.println("I'm a vehicle!");
@@ -130,13 +130,12 @@ Anonymous functions that enable functional programming
             class Car implements Vehicle {
                 // Inherits default implementation
             }
-        ```
+    ```
 ---
 ## Optional Class
 - Null-safe container object
 
 ```java
-
 Optional<String> optional = Optional.ofNullable(getName());
 String result = optional
     .filter(s -> s.length() > 3)
