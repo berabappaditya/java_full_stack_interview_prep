@@ -7,6 +7,13 @@
   - what is java atomic class
   - java Multtithreading
   - what is serialization and in java and transient keyword
+  - what is string constant pool in java
+
+## Collections
+   ### HashMap 
+    - How to iterate 
+
+     
 
 
 ## java OOPs
